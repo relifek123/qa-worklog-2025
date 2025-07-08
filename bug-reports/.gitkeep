@@ -1,0 +1,23 @@
+# 🐞 Bug Report — Company Filtering by Deleted Flag
+
+**Date:** 2025-07-08  
+**Module:** Company List  
+**Environment:** Web app, Chrome 124, QA env
+
+### 🔍 Summary:
+Companies with `deleted: true` are still visible in the company list.
+
+### ✅ Expected:
+- If `deleted: true` → do **not** display in list.
+- If `deleted: false` → display in list.
+
+### ❌ Actual:
+- Both `deleted: true` and `false` are shown.
+
+### 📌 Steps to Reproduce:
+1. Login as admin
+2. Go to `/companies`
+3. Observe companies with `deleted: true`
+
+### 🧠 Notes:
+- Check backend flag behavior (`null` edge case?)
