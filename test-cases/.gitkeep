@@ -1,0 +1,21 @@
+# ✅ Test Case — Company List Filtering (deleted flag)
+
+**ID:** TC-2025-07-08-01  
+**Title:** Filtering companies by deleted flag  
+**Module:** Company List Page  
+**Type:** Functional, Positive/Negative
+
+### 📝 Preconditions:
+- User is logged in as admin
+
+### 🔄 Steps:
+1. Navigate to Company List
+2. Ensure test data has both `deleted: true` and `deleted: false`
+3. Observe the visible companies
+
+### ✅ Expected Result:
+- Only companies with `deleted: false` should be shown
+
+### ❌ Negative Path:
+- If companies with `deleted: true` are shown → FAIL
+
